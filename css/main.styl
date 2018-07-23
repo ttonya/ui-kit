@@ -1,0 +1,458 @@
+@font-face
+  font-family: 'FontAwesome'
+  src: url('./fonts/fa-solid-900.eot')
+  src: url('./fonts/fa-solid-900.eot?#iefix') format('embedded-opentype'),
+  url('./fonts/fa-regular-400.woff') format('woff'),
+  url('./fonts/fa-regular-400.ttf') format('truetype')
+  font-weight: normal
+  font-style: normal
+
+@font-face
+  font-family: 'Myriad Pro Regular'
+  src: url('./fonts/MyriadPro-Regular.eot')
+  src: url('./fonts/MyriadPro-Regular.eot?#iefix') format('embedded-opentype'),
+  url('./fonts/MyriadPro-Regular.woff') format('woff'),
+  url('./fonts/MyriadPro-Regular.ttf') format('truetype')
+  font-weight: normal
+  font-style: normal
+
+@font-face
+  font-family: 'Myriad Pro Bold'
+  src: url('./fonts/MyriadPro-Bold.eot')
+  src: url('./fonts/MyriadPro-Bold.eot?#iefix') format('embedded-opentype'),
+  url('./fonts/MyriadPro-Bold.woff') format('woff'),
+  url('./fonts/MyriadPro-Bold.ttf') format('truetype')
+  font-weight: normal
+  font-style: normal
+
+@font-face
+  font-family: 'Myriad Pro Light SemiExtended'
+  src: url('./fonts/MyriadPro-LightSemiExt.eot')
+  src: url('./fonts/MyriadPro-LightSemiExt.eot?#iefix') format('embedded-opentype'),
+  url('./fonts/MyriadPro-LightSemiExt.woff') format('woff'),
+  url('./fonts/MyriadPro-LightSemiExt.ttf') format('truetype')
+  font-weight: normal
+  font-style: normal
+
+body
+ background-color: #ffffff
+ color: #000000
+ font-family: 'Myriad Pro Regular'
+ font-size: 14px
+ max-width:1920px
+ min-width: 600px
+
+.header
+  text-align: center
+
+.header__round
+  background: #ffffff
+  border: 1px solid #3d6cb0
+  border-radius: 50%
+  position: relative
+  margin: 0 auto
+
+.header__round::after
+  content:""
+  display: block
+  position: absolute
+  background:#3d6cb0
+  border-radius: 50%
+  top: 10px
+  left: 10px
+
+.header__name
+  font-size: 54px
+.header__surname
+  font-size: 64px
+  margin-left: -1px
+.header__profession
+  font-size: 25.78px
+.about__header
+  font-size: 42.47px
+.about__info
+  font-size: 15.92px
+span.info__bold
+  font-size: 15.92px
+  line-height: 17px
+.contact__header
+  font-size: 21.23px
+  color: #3d6cb0
+.contact__data
+  font-size: 21.23px
+.info__header
+  font-size: 26.54px
+  text-transform: uppercase
+.experience__description
+  font-size: 15.92px
+.experience__period
+  font-size: 26.54px
+.header__round
+  width: 238px
+  height: 238px
+.header__round::after
+  width: 208px
+  height: 208px
+  top: 15px
+  left: 15px
+@media (max-width:1366px)
+  .col-1
+    width:555px
+  .col-2
+    width:772px
+
+// @media (max-width: 1280px)
+@media (max-width: 1362px)
+  .col-1
+    width: 48%
+    float: left
+  .col-2
+    width: 48%
+    float: right
+  .about
+    width: 100%
+  .content
+    width: 100%
+  table
+    margin: 0 !important
+    padding: 0!important
+
+@media (max-width: 900px)
+  .col-1
+    width: auto
+    display: inline-block
+    margin: 0 auto
+    padding: 0
+  .col-2
+    width: auto
+    display: inline-block
+    margin: 0 auto
+    padding: 0
+  .header__line
+    width: 50%
+  .col-1 .about
+    margin: 0 !important
+    padding: 0!important
+  table
+    margin: 0 !important
+    padding: 0!important
+  .about
+    width: 100%
+    margin: 0 auto
+    padding: 0
+  .content
+    width: 100%
+    padding: 0
+    margin: 0 auto
+  .col-2 .content
+    padding-right: 0!important
+
+@media (max-width: 700px)
+  .col-1
+    width: auto
+    display: inline-block
+    margin: 0 auto
+    padding: 0
+  .col-2 .content
+    padding-right: 0!important
+  .col-2
+    width: auto
+    display: inline-block
+    margin: 0 auto
+    padding: 0
+  ul,
+  li,
+  .experience__description
+    width: 100%
+  .col-1 .about,
+  .profile
+    margin: 0
+    padding: 0
+  .about
+    width: 100%
+    margin: 0 auto
+    padding: 0
+  .content
+    width: 100%
+    padding: 0
+    margin: 0 auto
+  .header__round
+    width: 120px
+    height: 120px
+  .header__round::after
+    width: 100px
+    height: 100px
+    top: 10px
+    left: 10px
+  .header__name
+    font-size: 50px
+  .header__surname
+    font-size: 60px
+  .header__profession
+    font-size: 22px
+  .about__header
+    font-size: 38px
+  .about__info
+    font-size: 13px
+  span.info__bold
+    font-size: 13px
+    line-height: 14px
+  .contact__header
+    font-size: 18px
+    color: #3d6cb0
+  .contact__data
+    font-size: 18px
+  .info__header
+    font-size: 23px
+    text-transform: uppercase
+  .experience__description
+    font-size: 13px
+  .experience__period
+    font-size: 23px
+  .content
+    width: auto
+  table
+    margin: 0 !important
+    padding: 0!important
+/* start margin-top for headers*/
+.profile
+  margin-top: 78px
+.contact
+  margin-top: 48px
+.skills
+  margin-top: 26px
+  margin-left: -2px
+.experience,
+.software
+  margin-top: 41px
+/* end margin-top for headers*/
+
+/*start icons*/
+.profile__icon
+  background: url('../img/icons.png') no-repeat -56px 3px
+.contact__icon
+  background: url('../img/icons.png') no-repeat -118px 3px
+.skills__icon
+  background: url('../img/icons.png') no-repeat -181px 3px
+.education__icon
+  background: url('../img/icons.png') no-repeat 5px 3px
+.experience__icon
+  background: url('../img/icons.png') no-repeat -305px 3px
+.software__icon
+  background: url('../img/icons.png') no-repeat -243px 3px
+  margin-top: -4px !important
+/*end icons*/
+.header__name
+  font-family: 'Myriad Pro Light SemiExtended'
+  text-transform: uppercase
+  margin-top:26px
+  letter-spacing: 0.5px
+.header__surname
+  text-transform: uppercase
+  font-family: 'Myriad Pro Bold'
+  margin-top: -16px
+.header__profession
+  text-transform: uppercase
+  font-family: 'Myriad Pro Bold'
+  letter-spacing: -0.5px
+.col-1 .about
+  padding-left: 56px
+.about .content
+  padding-right: 74px
+.col-1,
+.col-2
+  padding-top: 10px
+
+.block__header
+  width: 100%
+  position: relative
+
+.about__icon
+  display:inline-block
+  float: left
+  width: 73px
+  height: 73px
+  border: 1px solid #0071bb
+  border-radius: 50%
+  position: relative
+  margin: 0 auto
+  background-color:#0071bb
+  box-shadow: 0px 0px 0px 3px #fff inset
+
+.header
+  width: 100%
+.profile .content
+  margin-top: 12px
+  margin-left: -1px
+.content
+  display: inline-block
+.software .content,
+.contact .content
+  margin-top: 28px
+.skills .content
+  margin-top: 20px
+.col-1
+  margin-top:73px
+  display: inline-block
+  float:left
+
+.col-2
+  margin-top:60px
+  display: inline-block
+  float:right
+.col-2 .content
+  padding-right: 130px
+.skills .content
+  text-align: center
+  margin-left: -68px
+table
+  margin-left: -79px
+  margin-top: 2px
+td
+  margin:0
+  padding:0
+  height: 54px
+  text-align: left
+td.contact__header
+   width: 131px
+.skill
+  margin-left: 8px
+  margin-top: 17px
+.skill__name.info__header
+  margin-left:8px
+.skill ul
+  margin:0
+  margin-top:7px
+  margin-left: -8px
+.skill ul li
+  display: inline-block
+  width: 18px
+  height: 18px
+  border-radius: 50%
+.skill ul li:not(:first-child)
+  margin-left: 7.5px
+
+
+.experience__position
+  margin-top: 3px
+  margin-left: -1px
+.experience__degree
+  float: left
+  display: inline-block
+  font-family: 'Myriad Pro Bold'
+  color: #3d6cb0
+
+ .experience__period
+  display: inline-block
+  margin-left: 16px
+  clear: right
+ .experience .experience__period
+  margin-left: 13px
+.about__header
+  margin-left: 10px
+  display:inline-block
+  margin-top:11px
+  text-transform: uppercase
+  color: #0071bb
+  font-family: 'Myriad Pro Bold'
+
+.header__line
+  display: inline-block
+  height: 5px
+  background-image: linear-gradient(#0071bb,#0071bb);
+  margin-bottom: 11px
+  margin-left:5px
+.col-2 .about__header
+  margin-left: 20px
+.about__info
+  display: block
+  clear: both
+
+span.info__bold,
+.contact__header
+  font-family: 'Myriad Pro Bold'
+
+ul
+ list-style: none
+
+li
+  margin: 0
+  position: relative
+.experience li:before
+  left: -45px
+  top: -37px
+  position: absolute
+  float: left
+  content:'•'
+  font-size:100px
+  vertical-align: top
+  margin: 0
+  display: inline-block
+
+.education li:before
+  left: -45px
+  top: -49px
+  position: absolute
+  float: left
+  content:'•'
+  font-size:100px
+  vertical-align: top
+  margin: 0
+  display: inline-block
+.education .content,
+.experience .content
+  padding-left:13px
+  margin-top: 12px
+.experience__facility
+  margin-top:3px
+.experience .experience__facility
+  font-family: 'Myriad Pro Bold'
+  display: inline-block
+  margin-top: 12px
+.experience .content
+  margin-top: 16px
+.experience .experience__info:nth-child(2)
+  margin-top: -1px !important
+.experience .experience__info:nth-child(3)
+  margin-top: 2px !important
+.experience__description
+  margin-top: 5px
+  margin-left: 2px
+li.experience__info
+  margin-top: 14px
+li.experience__info:nth-child(3)
+  margin-top: 11px
+li.experience__info:nth-child(4)
+  margin-top: 11px
+.software__info
+  display: inline-block
+.software__name
+  margin-left: 9px
+.software__info:nth-child(3)
+  margin-top: 15px
+  margin-right: 49px
+.software__info:first-child
+  margin-right: 49px
+.software__info:nth-child(5)
+  margin-top: 10px
+  margin-right: 49px
+.software__name:nth-of-type(2n)
+  margin-left: -2px
+.software__skill
+  width: 287px
+  height: 23px
+  background-color: #e6e6e6
+  margin: 10px
+  padding: 0
+  position: relative
+  margin-top: 11px
+.software .content
+  margin-top: 28px
+  margin-left: -3px
+  margin-right: -49px !important
+.software__skill_colored
+  position: absolute
+  top: 0
+  left:0
+  height: 23px
+  background-color: #3d6cb0

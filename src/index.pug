@@ -1,0 +1,20 @@
+include mixins/software-mixin.pug 
+include mixins/skill-mixin.pug 
+include mixins/header-mixin.pug 
+include mixins/education-mixin.pug 
+include mixins/experience-mixin.pug 
+include mixins/software-mixin.pug   
+doctype html
+html(lang="en")
+  include includes/head.pug
+  body
+   .col-1
+      include includes/header.pug
+      include includes/profile.pug
+      include includes/contact.pug
+      include includes/skills.pug   
+   .col-2 
+      include includes/education.pug 
+      include includes/experience.pug
+      include includes/software.pug      
+         
