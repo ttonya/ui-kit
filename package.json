@@ -1,7 +1,7 @@
 {
-  "name": "cv",
+  "name": "ui-kit",
   "version": "1.0.0",
-  "description": "cv template",
+  "description": "ui-kit",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --entry ./src/app.js --output-filename ./dist/bundle.js",

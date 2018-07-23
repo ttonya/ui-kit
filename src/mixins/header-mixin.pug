@@ -1,5 +1,2 @@
-mixin header(header, className, n)
-  .block__header
-    .about__icon(class=className)
-    .about__header #{header}
-    .header__line(style='width:'+n+'px')
+mixin header(header, className)
+  .block__header(class=className) #{header} 
