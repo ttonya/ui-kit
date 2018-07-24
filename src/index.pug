@@ -1,6 +1,8 @@
 include mixins/header-mixin.pug 
+include mixins/button-mixin.pug 
 doctype html
 html(lang="en")
   include includes/head.pug
   body
-    +header('standart buttons', 'block__header_main')
+   .container
+    include includes/standart_buttons.pug
