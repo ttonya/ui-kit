@@ -92,7 +92,6 @@ body {
   color: #fff;
   box-shadow: 0 1px 0px 1px #28a290;
 }
-.button__standart__blue:active,
 .button__standart__blue_active {
   background-color: #4eb7a8;
   border: 1px solid #4eb7a8;
