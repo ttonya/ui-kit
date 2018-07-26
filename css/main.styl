@@ -26,6 +26,9 @@ body
 
 .block__header_main
   text-transform: uppercase
+  margin-top: 50px
+
+/* start standart buttons*/
 
 .buttons__column1
   width: 10%
@@ -101,3 +104,56 @@ body
   border: 1px solid #4eb7a8
   color: #ffffff
   box-shadow: none
+
+/*end standart buttons*/
+
+/* start arrow buttons*/
+.arrow__buttons__block
+  margin-top: 50px
+.arrow__button
+  margin-right: 24px
+  width: 47px
+  height: 47px
+  border-radius: 50%
+  position: relative
+  display: inline-block
+  margin-top: 50px
+
+.arrow__button_left
+  position: absolute
+  border-bottom: 3px solid white
+  border-left: 3px solid white
+  height: 15px
+  width: 15px
+  top: 15px
+  left: 18px
+  transform: rotate(45deg) skew(10deg)
+
+.arrow__button_right
+  position: absolute
+  border-bottom: 3px solid white
+  border-left: 3px solid white
+  height: 15px
+  width: 15px
+  top: 15px
+  left: 13px
+  transform: rotate(235deg) skew(10deg)
+
+.arrow__button_disabled
+  background-color: #e5e5e5
+  border: 3px solid #e5e5e5
+
+.arrow__button_hovered
+  background-color: #4eb7a8
+  border: 3px solid #4eb7a8
+
+.arrow__button_inactive
+  background-color: #ffffff
+  border: 3px solid #4eb7a8
+
+.arrow__button_inactive .arrow__button_right,
+.arrow__button_inactive .arrow__button_left
+  border-bottom: 3px solid #4eb7a8
+  border-left: 3px solid #4eb7a8
+
+/*end arrow buttons*/
