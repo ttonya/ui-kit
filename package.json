@@ -12,6 +12,7 @@
   "dependencies": {
     "css-ripple-effect": "^1.0.5",
     "jquery": "^3.3.1",
+    "jquery-circle-progress": "^1.2.2",
     "pug": "^2.0.3",
     "pug-cli": "^1.0.0-alpha6",
     "pug-loader": "^2.4.0",
