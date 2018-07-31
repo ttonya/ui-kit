@@ -1,1 +1,16 @@
 +header('sliders', 'block__header_main')
+.slider
+ input(type="text" id="slider__first" name="slider__first" value="")
+
+.slider
+ input(type="text" id="slider__second" name="slider__second" value="")
+    
+script.
+ $("#slider__first").ionRangeSlider();
+ 
+ $("#slider__second").ionRangeSlider({
+    grid: true,
+    min: 0,
+    max: 100,
+    from: 0
+ });
