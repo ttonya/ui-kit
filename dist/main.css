@@ -164,5 +164,13 @@ svg {
   display: inline-block;
   margin-right: 40px;
 }
+#slider__first .irs-from,
+#slider__first .irs-to,
+#slider__first .irs-single {
+  background-color: #ed5565 !important;
+}
+#slider__first .irs-bar {
+  background-color: #e1e4e9 !important;
+}
 /*end sliders*/
 
