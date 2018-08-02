@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script type="text/javascript" src="./jquery.progressbar.js"></script>
+  <link rel="stylesheet" media="all" href="./jquery.progressbar.css" />
+  <script type="text/javascript">
+    jQuery(document).ready(function($) {
+      $('#steps').progressbar({
+        steps: ['', '', '@ ', ' ', '']
+      });
+    });
+  </script>
+</head>
+<body>
+  <div class="container">
+    <div id="steps"></div>
+  </div>
+
+</body>
+</html>

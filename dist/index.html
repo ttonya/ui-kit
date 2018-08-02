@@ -6,8 +6,10 @@
   <link rel="stylesheet" href="./css/ripple.min.css">
   <link rel="stylesheet" href="./modules/rangeslider/css/ion.rangeSlider.css">
   <link rel="stylesheet" href="./modules/rangeslider/css/ion.rangeSlider.skinFlat.css">
+  <link rel="stylesheet" media="all" href="./modules/progress-bar/jquery.progressbar.css">
+  <script src="//code.jquery.com/jquery.min.js"></script>
+  <script src="./modules/progress-bar/jquery.progressbar.js"></script>
   <script src="./node_modules/jquery-circle-progress/dist/circle-progress.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   <script src="./modules/rangeslider/js/ion-rangeSlider/ion.rangeSlider.min.js"></script>
 <link href="main.css" rel="stylesheet"></head>
   <body>
@@ -72,10 +74,10 @@
         <circle r="80" cx="95" cy="110" fill="none" stroke-width="29" stroke="#4eb7a8" stroke-dasharray="130 370" stroke-dashoffset="-60"></circle>
       </svg>
       <div class="block__header block__header_main">sliders </div>
-      <div class="slider">
+      <div class="slider slider__first">
         <input type="text" id="slider__first" name="slider__first" value="">
       </div>
-      <div class="slider">
+      <div class="slider slider__second">
         <input type="text" id="slider__second" name="slider__second" value="">
       </div>
       <script>
@@ -88,6 +90,26 @@
            from: 0
         });
       </script>
+      <div class="block__header block__header_main">stages </div>
+      <div id="steps"></div>
+      <script>
+        jQuery(document).ready(function($) {
+          $('#steps').progressbar({
+            steps: ['', '', '@ ', ' ', '']
+          });
+        });
+      </script>
+      <div class="block__header block__header_main">form elements </div>
+      <form class="contact__form">
+        <label>
+          <input class="contact__form__data contact__form__name" type="text" name="name" placeholder="Your Name">
+        </label>
+        <label>
+          <input class="contact__form__data contact__form__email" type="email" name="name" placeholder="Your Email">
+        </label>
+        <textarea class="contact__form__data textarea" rows="4" cols="40"> </textarea>
+        <input class="contact__form__submit button__standart__big button__standart__blue_hover" type="submit" name="submit" value="Submit">
+      </form>
     </div>
   <script type="text/javascript" src="bundle.js"></script></body>
 </html>

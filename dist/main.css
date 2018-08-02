@@ -17,7 +17,7 @@ body {
   text-align: center;
 }
 .container {
-  width: 84%;
+  width: 75%;
   margin: 0 auto;
 }
 .block__header_main {
@@ -173,4 +173,32 @@ svg {
   background-color: #e1e4e9 !important;
 }
 /*end sliders*/
+/*start contact form*/
+.contact__form {
+  float: left;
+  width: 35%;
+  padding: 10px;
+}
+.contact__form__data {
+  background-color: #e5e5e5;
+  color: #888;
+  font-size: 14px;
+  padding: 10px 13px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 12px;
+  float: left;
+}
+.contact__form__name,
+.contact__form__email {
+  width: 80%;
+}
+.textarea {
+  width: 100%;
+}
+.contact__form__submit {
+  float: right;
+  margin-top: 12px;
+}
+/*end contact form*/
 

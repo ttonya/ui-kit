@@ -1,0 +1,51 @@
+
+ul.progressbar {
+  height: 75px;
+  padding: 0;
+  counter-reset: step;
+}
+ul.progressbar li {
+  list-style-type: none;
+  color: #888888;
+  float: left;
+  position: relative;
+  text-align: center;
+}
+ul.progressbar li:before {
+  content: counter(step);
+  counter-increment: step;
+  color: #888888;
+  width: 42px;
+  height: 42px;
+  line-height: 42px;
+  border-radius: 50%;
+  display: block;
+  text-align: center;
+  margin: 0 auto 10px auto;
+  background: rgb(216,216,216);
+}
+ul.progressbar li:after {
+  content: "";
+  background: #ddd;
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  top: 14px;
+  right: -50%;
+  z-index: -1;
+}
+ul.progressbar li:last-child:after {
+  content: none;
+}
+ul.progressbar li.done:before, ul.progressbar li.done:after {
+  background: #e75735;
+  color: #fff;
+
+}
+ul.progressbar li.current:before {
+  background: #e75735;
+  color: #fff;
+}
+ul.progressbar li.fail:before {
+  background: rgb(229, 48, 40)
+}
