@@ -24,6 +24,9 @@ body {
   text-transform: uppercase;
   margin-top: 50px;
 }
+.block__header__inside {
+  text-transform: uppercase;
+}
 /* start standart buttons*/
 .buttons__column1 {
   width: 10%;
@@ -199,6 +202,12 @@ svg {
 .contact__form__submit {
   float: right;
   margin-top: 12px;
+}
+.form__elements__block__two {
+  float: right;
+  width: 35%;
+  margin-right: 50px;
+  padding: 40px;
 }
 /*end contact form*/
 

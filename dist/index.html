@@ -7,10 +7,13 @@
   <link rel="stylesheet" href="./modules/rangeslider/css/ion.rangeSlider.css">
   <link rel="stylesheet" href="./modules/rangeslider/css/ion.rangeSlider.skinFlat.css">
   <link rel="stylesheet" media="all" href="./modules/progress-bar/jquery.progressbar.css">
+  <link rel="stylesheet" href="./modules/jquery-toggle/lc_switch.css">
   <script src="//code.jquery.com/jquery.min.js"></script>
   <script src="./modules/progress-bar/jquery.progressbar.js"></script>
   <script src="./node_modules/jquery-circle-progress/dist/circle-progress.js"></script>
   <script src="./modules/rangeslider/js/ion-rangeSlider/ion.rangeSlider.min.js"></script>
+  <script src="./modules/jquery-validation/dist/jquery.validate.js"></script>
+  <script src="./modules/jquery-toggle/lc_switch.js"></script>
 <link href="main.css" rel="stylesheet"></head>
   <body>
     <div class="container">
@@ -105,11 +108,63 @@
           <input class="contact__form__data contact__form__name" type="text" name="name" placeholder="Your Name">
         </label>
         <label>
-          <input class="contact__form__data contact__form__email" type="email" name="name" placeholder="Your Email">
+          <input class="contact__form__data contact__form__email" type="email" name="email" placeholder="Your Email">
         </label>
         <textarea class="contact__form__data textarea" rows="4" cols="40"> </textarea>
         <input class="contact__form__submit button__standart__big button__standart__blue_hover" type="submit" name="submit" value="Submit">
       </form>
+      <div class="form__elements__block__two">
+        <div class="block__header block__header__inside">toggle </div>
+        <input class="lcs_check" type="checkbox" name="check-1" value="4" autocomplete="off">
+        <input class="lcs_check lcs_tt1" type="checkbox" name="check-3" value="6" checked="checked" autocomplete="off">
+        <div class="block__header block__header_main">tick boxes </div>
+        <div class="checkbox__container">
+          <input class="checkbox" type="checkbox" checked><span class="checkmark checkmark"></span>
+          <input class="checkbox" type="checkbox"><span class="checkmark checkmark">   </span>
+        </div>
+      </div>
+      <script>
+        $(document).ready(function () {
+        
+            $('.contact__form').validate({ // initialize the plugin
+                rules: {
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    name: {
+                        required: true,
+                        minlength: 5
+                    }
+                }
+            });
+        
+        });
+        
+      </script>
+      <script>
+        $(document).ready(function(e) {
+        	$('input').lc_switch();
+        
+        	// triggered each time a field changes status
+        	$('body').delegate('.lcs_check', 'lcs-statuschange', function() {
+        		var status = ($(this).is(':checked')) ? 'checked' : 'unchecked';
+        		console.log('field changed status: '+ status );
+        	});
+        	
+        	
+        	// triggered each time a field is checked
+        	$('body').delegate('.lcs_check', 'lcs-on', function() {
+        		console.log('field is checked');
+        	});
+        	
+        	
+        	// triggered each time a is unchecked
+        	$('body').delegate('.lcs_check', 'lcs-off', function() {
+        		console.log('field is unchecked');
+        	});
+        });
+      </script>
     </div>
   <script type="text/javascript" src="bundle.js"></script></body>
 </html>

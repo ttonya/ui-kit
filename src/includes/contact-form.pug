@@ -3,8 +3,59 @@ form.contact__form
   label
    input(type="text" name="name" placeholder="Your Name" class="contact__form__data contact__form__name")
   label
-   input(type="email" name="name" placeholder="Your Email" class="contact__form__data contact__form__email") 
+   input(type="email" name="email" placeholder="Your Email" class="contact__form__data contact__form__email") 
   textarea(rows="4" cols="40" class="contact__form__data textarea") 
   input(type="submit"  name="submit" value="Submit" class="contact__form__submit button__standart__big button__standart__blue_hover")
- 
- 
+
+.form__elements__block__two
+  +header('toggle', 'block__header__inside')
+  input(type="checkbox" name="check-1" value="4" class="lcs_check" autocomplete="off")
+
+  input(type="checkbox" name="check-3" value="6" class="lcs_check lcs_tt1" checked="checked" autocomplete="off")
+  +header('tick boxes', 'block__header_main')
+  .checkbox__container
+   input(type="checkbox" class="checkbox" checked)
+   span(class="checkmark" class="checkmark")
+   input(type="checkbox" class="checkbox")
+   span(class="checkmark" class="checkmark")    
+  
+script.
+  $(document).ready(function () {
+
+      $('.contact__form').validate({ // initialize the plugin
+          rules: {
+              email: {
+                  required: true,
+                  email: true
+              },
+              name: {
+                  required: true,
+                  minlength: 5
+              }
+          }
+      });
+
+  });
+
+script.
+  $(document).ready(function(e) {
+  	$('input').lc_switch();
+  
+  	// triggered each time a field changes status
+  	$('body').delegate('.lcs_check', 'lcs-statuschange', function() {
+  		var status = ($(this).is(':checked')) ? 'checked' : 'unchecked';
+  		console.log('field changed status: '+ status );
+  	});
+  	
+  	
+  	// triggered each time a field is checked
+  	$('body').delegate('.lcs_check', 'lcs-on', function() {
+  		console.log('field is checked');
+  	});
+  	
+  	
+  	// triggered each time a is unchecked
+  	$('body').delegate('.lcs_check', 'lcs-off', function() {
+  		console.log('field is unchecked');
+  	});
+  });
