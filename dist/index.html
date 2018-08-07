@@ -116,12 +116,14 @@
       <div class="form__elements__block__two">
         <div class="block__header block__header__inside">toggle </div>
         <input class="lcs_check" type="checkbox" name="check-1" value="4" autocomplete="off">
-        <input class="lcs_check lcs_tt1" type="checkbox" name="check-3" value="6" checked="checked" autocomplete="off">
+        <input class="lcs_check" type="checkbox" name="check-3" value="6" checked="checked" autocomplete="off">
         <div class="block__header block__header_main">tick boxes </div>
-        <div class="checkbox__container">
-          <input class="checkbox" type="checkbox" checked><span class="checkmark checkmark"></span>
-          <input class="checkbox" type="checkbox"><span class="checkmark checkmark">   </span>
-        </div>
+        <label class="checkbox__container">
+          <input class="checkbox" type="checkbox" checked><span class="checkmark checkmark_checked" name="checkmark"></span>
+        </label>
+        <label class="checkbox__container"> 
+          <input class="checkbox" type="checkbox"><span class="checkmark checkmark_inactive" name="checkmark">   </span>
+        </label>
       </div>
       <script>
         $(document).ready(function () {

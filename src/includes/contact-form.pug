@@ -11,13 +11,14 @@ form.contact__form
   +header('toggle', 'block__header__inside')
   input(type="checkbox" name="check-1" value="4" class="lcs_check" autocomplete="off")
 
-  input(type="checkbox" name="check-3" value="6" class="lcs_check lcs_tt1" checked="checked" autocomplete="off")
+  input(type="checkbox" name="check-3" value="6" class="lcs_check" checked="checked" autocomplete="off")
   +header('tick boxes', 'block__header_main')
-  .checkbox__container
-   input(type="checkbox" class="checkbox" checked)
-   span(class="checkmark" class="checkmark")
-   input(type="checkbox" class="checkbox")
-   span(class="checkmark" class="checkmark")    
+  label.checkbox__container
+     input(type="checkbox" class="checkbox" checked)
+     span(name="checkmark" class="checkmark checkmark_checked")
+  label.checkbox__container 
+     input(type="checkbox" class="checkbox")
+     span(name="checkmark" class="checkmark checkmark_inactive")    
   
 script.
   $(document).ready(function () {
