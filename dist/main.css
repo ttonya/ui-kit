@@ -177,10 +177,13 @@ svg {
 }
 /*end sliders*/
 /*start contact form*/
-.contact__form {
+form.contact__form {
   float: left;
-  width: 35%;
+  width: 37% !important;
   padding: 10px;
+}
+.contact__form label {
+  position: relative;
 }
 .contact__form__data {
   background-color: #e5e5e5;
@@ -191,10 +194,22 @@ svg {
   border-radius: 5px;
   margin-top: 12px;
   float: left;
+  display: inline-block;
+}
+.contact__form__message {
+  margin-left: 10px;
+  float: right;
+  padding: 10px;
+}
+.success {
+  background: #008000;
+}
+.error {
+  background: #f00;
 }
 .contact__form__name,
 .contact__form__email {
-  width: 80%;
+  width: 65%;
 }
 .textarea {
   width: 100%;

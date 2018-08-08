@@ -2,8 +2,10 @@
 form.contact__form
   label
    input(type="text" name="name" placeholder="Your Name" class="contact__form__data contact__form__name")
+   .contact__form__message Error
   label
    input(type="email" name="email" placeholder="Your Email" class="contact__form__data contact__form__email") 
+   .contact__form__message Success
   textarea(rows="4" cols="40" class="contact__form__data textarea") 
   input(type="submit"  name="submit" value="Submit" class="contact__form__submit button__standart__big button__standart__blue_hover")
 
@@ -14,30 +16,29 @@ form.contact__form
   input(type="checkbox" name="check-3" value="6" class="lcs_check" checked="checked" autocomplete="off")
   +header('tick boxes', 'block__header_main')
   label.checkbox__container
-     input(type="checkbox" class="checkbox" checked)
+     input(type="checkbox" class="checkbox" checked required)
      span(name="checkmark" class="checkmark checkmark_checked")
   label.checkbox__container 
-     input(type="checkbox" class="checkbox")
+     input(type="checkbox" class="checkbox" required)
      span(name="checkmark" class="checkmark checkmark_inactive")    
   
 script.
-  $(document).ready(function () {
-
-      $('.contact__form').validate({ // initialize the plugin
-          rules: {
-              email: {
-                  required: true,
-                  email: true
-              },
-              name: {
-                  required: true,
-                  minlength: 5
-              }
-          }
-      });
-
-  });
-
+ function validate(e) {
+   var message = document.querySelector('.contact__form__message');
+   var data = document.querySelector('.contact__form__data');
+   var form = document.querySelector('form.contact__form');   
+     
+     if (data.length == 0) {
+       /* message.classList.add('error'); */
+       alert('error');
+     }
+     else {
+       message.classList.add('success');
+     }
+     
+   e.preventDefault();
+   return false;
+ }
 script.
   $(document).ready(function(e) {
   	$('input').lc_switch();

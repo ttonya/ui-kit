@@ -184,11 +184,12 @@ svg
 /*end sliders*/
 
 /*start contact form*/
-.contact__form
+form.contact__form
   float: left
-  width: 35%
+  width: 37% !important
   padding: 10px
-
+.contact__form label
+  position: relative
 .contact__form__data
   background-color: #e5e5e5
   color: #888888
@@ -198,10 +199,18 @@ svg
   border-radius: 5px
   margin-top: 12px
   float: left
-
+  display:inline-block
+.contact__form__message
+  margin-left: 10px
+  float: right
+  padding: 10px
+.success
+  background: green
+.error
+  background: red
 .contact__form__name,
 .contact__form__email
-  width: 80%
+  width: 65%
 .textarea
   width: 100%
 .contact__form__submit
@@ -213,43 +222,6 @@ svg
   width: 35%
   margin-right: 50px
   padding: 40px
-
-// .checkbox
-//   width: 0
-//   height:0
-//   margin-right: 40px
-// .checkbox__container
-//   height: 30px
-//   width:30px
-//   position: relative
-//   display: inline-block
-// .checkbox::before
-//   content: ''
-//   display: inline-block
-//   width: 24px
-//   height: 24px
-//   border-radius: 50%
-//   background-color:#e5e5e5
-// .checkmark
-//   width: 6px
-//   height: 12px
-//   top: 18px
-//   left: 12px
-// .checkmark_inactive
-//   border-bottom: 2px solid #888888
-//   border-right: 2px solid #888888
-//   transform: rotate(45deg)
-//   position: absolute
-//
-// .checkmark_checked,
-// .checkmark_inactive:checked
-//   border-bottom: 2px solid #ffffff
-//   border-right: 2px solid #ffffff
-//   transform: rotate(45deg)
-//   position: absolute
-//
-// .checkbox__container input:checked .checkbox::before
-//   background-color:#4eb7a8
 
 .checkbox__container
     display: inline-block
